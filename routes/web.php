@@ -19,3 +19,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/client', [\App\Http\Controllers\ClientController::class, 'index']);
 Route::post('/client/update/{id}', [\App\Http\Controllers\ClientController::class, 'update']);
+Route::post('/order/store/', [\App\Http\Controllers\ClientController::class, 'store']);
+
+Route::get('/order', [\App\Http\Controllers\OrderController::class, 'index']);
+Route::post('/order/store/{email}', [\App\Http\Controllers\OrderController::class, 'store']);
+Route::post('/order/update/{id}', [\App\Http\Controllers\OrderController::class, 'update']);
